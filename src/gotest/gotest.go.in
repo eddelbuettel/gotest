@@ -1,0 +1,12 @@
+package main
+
+// #cgo CFLAGS: @cppflags@
+// #cgo LDFLAGS: @ldflags@
+import "C"
+
+//export DoubleIt
+func DoubleIt(x int) int {
+  return 2 * x ;
+}
+
+func main() {}

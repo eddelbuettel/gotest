@@ -1,0 +1,15 @@
+#!/bin/sh
+
+## Check that we are on Unix
+uname=$(type -P uname)
+if [ "${uname}" = "" ]; then
+    echo "You do not have uname so this is unlikely to be a Unix system. Exiting."
+    exit -1
+fi
+
+: ${R_HOME=$(R RHOME)}
+
+cppflags=$(${R_HOME}/bin/R CMD config --cppflags)
+ldflags=$(${R_HOME}/bin/R CMD config --ldflags)
+
+sed -e"s|@cppflags@|${cppflags}|" -e"s|@ldflags@|${ldflags}|" src/gotest/gotest.go.in > src/gotest/gotest.go 

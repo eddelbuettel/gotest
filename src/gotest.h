@@ -5,18 +5,16 @@
 /* Start of preamble from import "C" comments.  */
 
 
-#line 3 "/Users/romain/git/gotest/src/gotest/gotest.go"
+#line 3 "/home/deddelbuettel/git/gotest/src/gotest/gotest.go"
 
 
 
-#line 1 "cgo-generated-wrapper"
 
 
 /* End of preamble from import "C" comments.  */
 
 
 /* Start of boilerplate cgo prologue.  */
-#line 1 "cgo-gcc-export-header-prolog"
 
 #ifndef GO_CGO_PROLOGUE_H
 #define GO_CGO_PROLOGUE_H
